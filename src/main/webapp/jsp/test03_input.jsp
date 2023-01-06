@@ -1,27 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>지원하기</title>
-	<!-- bootstrap CDN link -->
+<title>BMI 수치</title>
+<!-- bootstrap CDN link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
+  
 </head>
 <body>
-	<div class="container">
-		<h2>입사 지원</h2>
-		<form method="post" action="/servlet/test09">
-			<label>이름 : </label>
-			<input type = "text" class="form-control col-4" name="name"> <br>
-			<label>자기 소개서</label>
-			<br>
-			<textarea name="info" class="form-control" rows=10></textarea>
-			<br>
-			<input class="btn btn-primary btn-block"type="submit" value="지원">
+	<div class= "container">
+		<h1>체격 조건 입력</h1>
+		<form method="get" action="/jsp/test03.jsp">
+			<div class="d-flex">
+				<input class="col-2 form-control" name="height" placeholder="키를 입력하세요." type="text"><span class="ml-2 mt-3">cm</span>
+				<input class="col-2 form-control" name="weight" placeholder="몸무게를 입력하세요." type="text"><span class="ml-2 mt-3">kg</span>
+				<input class="btn btn-info ml-3"type="submit" value="계산">
+			</div>
 		</form>
 	</div>
 </body>
