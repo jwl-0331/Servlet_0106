@@ -22,14 +22,17 @@
 	%>
 	<div class="container">
 		<h1>오늘부터 1일</h1>
-		<div class="display-4 mt-2">
-			<% for(int i = 1; i <=10; i++ ){ %>
-			<span><%= i*100%>일: </span>
-			<% today.add(Calendar.DATE, 100);
-			String todayString = formatter.format(today.getTime())+ "<br>"; %>
-			<span class="text-danger"><%= todayString %></span>
+			<% 
+			today.add(Calendar.DATE,-1);
+			for(int i = 1; i <=10; i++ ){ 
+				today.add(Calendar.DATE,100);
+				String dateString = formatter.format(today.getTime());
+			%>
+			<div class="display-4 mt-2">
+				<span><%= i*100%>일: </span>
+				<span class="text-danger"> <%= dateString %></span>
+			</div>
 			<% } %>
-		</div>
 	</div>
 </body>
 </html>
