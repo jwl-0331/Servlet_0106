@@ -35,7 +35,7 @@
 			<img alt="그냥사진" width="500" src="https://cdn.pixabay.com/photo/2022/08/06/06/03/windmill-7367963_640.jpg">
 			<div>새해 복 많이 받으세요!!</div>
 		</section>
-		<footer class="mt-4">Copyright © marondal 2021</footer>
+		<footer class="mt-4 ">Copyright © marondal 2021</footer>
 	</div>
 </body>
 </html>
