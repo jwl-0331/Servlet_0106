@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+header > .logo{
+	height : 100px;
+	width:200px;
+}
+
+header > .search{
+	height : 100px;
+	width:1000px;
+}
+
+.main-menu{
+	height : 40px;
+}
+
+footer{
+	height: 50px;
+}
