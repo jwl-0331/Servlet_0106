@@ -23,6 +23,7 @@ public class MysqlService {
 	private Connection connection;
 	private Statement statement;
 	
+	//생성자
 	private MysqlService() {
 		
 	}
@@ -39,6 +40,7 @@ public class MysqlService {
 	//접속기능
 	public void connect() {
 		try {
+			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			connection = DriverManager.getConnection(url, userId, password);
 			statement = connection.createStatement();
 		} catch (SQLException e) {
