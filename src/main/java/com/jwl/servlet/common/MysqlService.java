@@ -8,6 +8,12 @@ import java.sql.Statement;
 
 public class MysqlService {
 	
+	//single turn -> 객체 한개만 생성하게 제한
+	//클래스가 자기 객체를 자기가 관리
+	//객체 생성없이 사용할 수 있는 변수가 된다.
+	//외부에서 객체 생성을 못하게 한다
+	private static MysqlService mysqlService = null;
+	
 	//멤버변수  주소, 아이디, 비밀번호
 	
 	private final String url = "jdbc:mysql://localhost:3306/jwl_1213";
@@ -17,6 +23,19 @@ public class MysqlService {
 	private Connection connection;
 	private Statement statement;
 	
+	private MysqlService() {
+		
+	}
+	
+	//객체 생성을 관리하는 메소드 -> 객체 생성없이 호출 가능 (static)
+	public static MysqlService getInstance() {
+		//하나의 객체만 생성
+		if(mysqlService == null) {
+			mysqlService = new MysqlService();
+		}
+		
+		return mysqlService;
+	}
 	//접속기능
 	public void connect() {
 		try {

@@ -22,7 +22,8 @@ public class Ex01Controller extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		
 		//used_goods 에 있는 모든 행 출력하기
-		MysqlService mysqlService = new MysqlService();
+		//생성자 private 직접 생성 불가능
+		MysqlService mysqlService = MysqlService.getInstance();
 		mysqlService.connect();
 		String selectQuery = "SELECT * FROM `used_goods`;";
 		ResultSet resultSet = mysqlService.select(selectQuery);
@@ -31,7 +32,6 @@ public class Ex01Controller extends HttpServlet{
 		out.println("<html><head><tile>중고 물품</title></head><body>");
 		try {
 			while(resultSet.next()) {
-				
 			//type 별로 get___("컬럼이름")
 				String title = resultSet.getString("title");
 				int price = resultSet.getInt("price");
