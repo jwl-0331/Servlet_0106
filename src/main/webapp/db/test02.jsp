@@ -23,23 +23,25 @@
 		ResultSet resultSet = mysqlService.select(query);
 				
 	%>
-	<table class="table">
-		<thead>
-			<tr class="font-weight-bold">
-				<th>이름(name)</th>
-				<th>주소(url)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% while(resultSet.next()){ %>
-			<tr>
-				<td><%= resultSet.getString("name") %></td>
-				<td><%= resultSet.getString("url")%></td>
-				<td><a href="/db/test02_delete?id=<%= resultSet.getInt("id") %>">삭제</a></td>
-			</tr>
-			<% } %>
-		</tbody>
-	</table>
-	<a href="/db/test02_input.jsp">추가하기</a>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr class="font-weight-bold">
+					<th>이름(name)</th>
+					<th>주소(url)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% while(resultSet.next()){ %>
+				<tr>
+					<td><%= resultSet.getString("name") %></td>
+					<td><a href= "<%= resultSet.getString("url")%>"><%= resultSet.getString("url")%></a></td>
+					<td><a href="/db/test02_delete?id=<%= resultSet.getInt("id") %>" target="_blank">삭제</a></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+		<a href="/db/test02_input.jsp">추가하기</a>
+	</div>
 </body>
 </html>

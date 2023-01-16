@@ -73,6 +73,8 @@ public class MysqlService {
 		}
 	}
 	
+	
+	
 	//접속 끊는 메소드
 	public void disconnect() {
 		try {

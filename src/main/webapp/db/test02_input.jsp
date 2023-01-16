@@ -12,19 +12,21 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-	<form method="get" action="/db/test02_insert">
-		<h1>즐겨찾기 추가</h1>
-		<div>
-			<label>사이트명:</label> <br>
-			<input type="text" class="form-control col-3" name="name"> <br>
-		</div>
-		<div>
-			<label>사이트주소:</label> <br>
-			<input type="text" class="form-control col-6" name="site"> <br>
-		</div>
-		<div>
-			<button class="btn btn-success mt-4" type="submit">추가</button>
-		</div>
-	</form>
+	<div class="container">
+		<form method="post" action="/db/test02_insert">
+			<h1>즐겨찾기 추가</h1>
+			<div>
+				<label>사이트명:</label> <br>
+				<input type="text" class="form-control col-3" name="name"> <br>
+			</div>
+			<div>
+				<label>사이트주소:</label> <br>
+				<input type="text" class="form-control col-6" name="site"> <br>
+			</div>
+			<div>
+				<button class="btn btn-success mt-4" type="submit">추가</button>
+			</div>
+		</form>
+	</div>
 </body>
 </html>

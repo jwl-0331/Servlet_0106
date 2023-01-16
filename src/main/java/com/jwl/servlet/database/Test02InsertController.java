@@ -13,9 +13,9 @@ import com.jwl.servlet.common.MysqlService;
 @WebServlet("/db/test02_insert")
 public class Test02InsertController extends HttpServlet{
 	
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	@Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		PrintWriter out = response.getWriter();
 		
 		MysqlService mysqlService = MysqlService.getInstance();
 		mysqlService.connect();
